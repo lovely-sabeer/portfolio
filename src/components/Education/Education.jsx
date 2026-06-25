@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { FiBookOpen, FiAward, FiMapPin } from 'react-icons/fi';
 import styles from './Education.module.css';
-import { education } from '../../assets/data';
+import { education } from '../../data/data';
 
 const EducationCard = ({ education }) => {
 	const EducationIcon = education.icon;

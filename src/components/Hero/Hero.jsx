@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { FiGithub, FiLinkedin, FiDownload, FiArrowDown } from 'react-icons/fi';
 import styles from './Hero.module.css';
-import { git, linkedIn, name, profession, profilePic, resumeDownload, summary } from '../../assets/data';
+import { git, linkedIn, name, profession, profilePic, resumeDownload, summary } from '../../data/data';
 function Hero() {
 	const scrollToProjects = () => {
 		const el = document.getElementById('projects');

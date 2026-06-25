@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { HiMenuAlt3, HiX } from 'react-icons/hi';
 import styles from './Navbar.module.css';
-import { logoName, navLinks } from '../../assets/data';
+import { logoName, navLinks } from '../../data/data';
 
 function Navbar() {
 	const [activeSection, setActiveSection] = useState('home');

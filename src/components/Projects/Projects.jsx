@@ -3,14 +3,13 @@ import { motion } from 'framer-motion';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, A11y } from 'swiper/modules';
 import { FiExternalLink } from 'react-icons/fi';
-import ProjectsData from '../../data/ProjectsData';
 import ProjectDetails from '../ProjectDetails/ProjectDetails';
 import styles from './Projects.module.css';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import { projects } from '../../assets/data';
+import { projects } from '../../data/data';
 
 const cardVariants = {
 	hidden: { opacity: 0, y: 50 },

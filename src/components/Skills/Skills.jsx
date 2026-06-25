@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import styles from './Skills.module.css';
-import { skills } from '../../assets/data';
+import { skills } from '../../data/data';
 
 const containerVariants = {
 	hidden: {},

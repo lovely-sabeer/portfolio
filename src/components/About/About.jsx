@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import styles from './About.module.css';
-import { aboutMe } from '../../assets/data';
+import { aboutMe } from '../../data/data';
 
 const fadeInUp = {
 	hidden: { opacity: 0, y: 40 },

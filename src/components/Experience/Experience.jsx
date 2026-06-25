@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import styles from './Experience.module.css';
-import { experiences } from '../../assets/data';
+import { experiences } from '../../data/data';
 
 function Experience() {
 	return (

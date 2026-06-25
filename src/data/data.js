@@ -1,5 +1,5 @@
 import { FiAward, FiBookOpen, FiCode, FiDatabase, FiLayers, FiMapPin, FiTarget } from "react-icons/fi"
-import { heroPic, resume } from "./assest"
+import { heroPic, resume } from "../assets/assest"
 
 
 export const navLinks = [

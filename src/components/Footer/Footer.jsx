@@ -1,7 +1,7 @@
 import React from 'react';
 import { FiGithub, FiLinkedin, FiMail, FiHeart } from 'react-icons/fi';
 import styles from './Footer.module.css';
-import { email, git, linkedIn, logoName, name, profession } from '../../assets/data';
+import { email, git, linkedIn, logoName, name, profession } from '../../data/data';
 
 function Footer() {
 	const currentYear = new Date().getFullYear();

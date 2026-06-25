@@ -66,6 +66,7 @@
 .contactItems {
 	display: flex;
 	flex-direction: column;
+	overflow-x: hidden;
 	gap: 16px;
 }
 

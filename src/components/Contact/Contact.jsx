@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { FiMail, FiPhone, FiSend, FiCheck, FiMapPin } from 'react-icons/fi';
 import styles from './Contact.module.css';
 import emailjs from '@emailjs/browser';
-import { address, email, phone } from '../../assets/data';
+import { address, email, phone } from '../../data/data';
 
 function Contact() {
 	const [formData, setFormData] = useState({

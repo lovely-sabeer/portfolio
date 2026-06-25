@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { FiGithub, FiLinkedin, FiDownload, FiArrowDown } from 'react-icons/fi';
 import styles from './Hero.module.css';
-import { heroPic, resume } from "../../assets/assest"
+import { git, linkedIn, name, profession, profilePic, resumeDownload, summary } from '../../assets/data';
 function Hero() {
 	const scrollToProjects = () => {
 		const el = document.getElementById('projects');
@@ -33,7 +33,7 @@ function Hero() {
 						animate={{ opacity: 1, y: 0 }}
 						transition={{ duration: 0.5, delay: 0.35 }}
 					>
-						Sheik Mohamed Sabeer
+						{name}
 					</motion.h1>
 
 					<motion.h2
@@ -42,7 +42,7 @@ function Hero() {
 						animate={{ opacity: 1, y: 0 }}
 						transition={{ duration: 0.5, delay: 0.5 }}
 					>
-						.NET Full Stack Developer
+						{profession}
 					</motion.h2>
 
 					<motion.p
@@ -51,11 +51,7 @@ function Hero() {
 						animate={{ opacity: 1, y: 0 }}
 						transition={{ duration: 0.5, delay: 0.65 }}
 					>
-						.NET Full Stack Developer with hands-on experience building scalable
-						web applications using ASP.NET Core, React.js, Entity Framework Core,
-						and MySQL. Skilled in developing REST APIs, responsive user
-						interfaces, authentication systems, database design, and business
-						applications.
+						{summary}
 					</motion.p>
 
 					<motion.div
@@ -69,7 +65,7 @@ function Hero() {
 							<FiArrowDown className={styles.btnIcon} />
 						</button>
 						<a
-							href={resume}
+							href={resumeDownload}
 							download
 							className={styles.secondaryBtn}
 						>
@@ -85,7 +81,7 @@ function Hero() {
 						transition={{ duration: 0.5, delay: 1.0 }}
 					>
 						<a
-							href="https://github.com/lovely-sabeer"
+							href={git}
 							target="_blank"
 							rel="noopener noreferrer"
 							className={styles.socialLink}
@@ -94,7 +90,7 @@ function Hero() {
 							<FiGithub size={20} />
 						</a>
 						<a
-							href="https://www.linkedin.com/in/sheik-mohamed-sabeer-07nov2003"
+							href={linkedIn}
 							target="_blank"
 							rel="noopener noreferrer"
 							className={styles.socialLink}
@@ -114,8 +110,8 @@ function Hero() {
 					<div className={styles.imageGlow} />
 					<div className={styles.imageContainer}>
 						<img
-							src={heroPic}
-							alt="Sheik Mohamed Sabeer"
+							src={profilePic}
+							alt={name}
 							className={styles.profileImage}
 						/>
 					</div>

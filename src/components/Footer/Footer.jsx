@@ -1,6 +1,7 @@
 import React from 'react';
 import { FiGithub, FiLinkedin, FiMail, FiHeart } from 'react-icons/fi';
 import styles from './Footer.module.css';
+import { email, git, linkedIn, logoName, name, profession } from '../../assets/data';
 
 function Footer() {
 	const currentYear = new Date().getFullYear();
@@ -11,14 +12,14 @@ function Footer() {
 				<div className={styles.top}>
 					<div className={styles.brand}>
 						<span className={styles.logo}>
-							<span className={styles.logoAccent}>S</span>abeer
+							<span className={styles.logoAccent}>{logoName.at(0)}</span>{logoName.substring(1)}
 						</span>
-						<p className={styles.tagline}>.NET Full Stack Developer</p>
+						<p className={styles.tagline}>{profession}</p>
 					</div>
 
 					<div className={styles.socials}>
 						<a
-							href="https://github.com"
+							href={git}
 							target="_blank"
 							rel="noopener noreferrer"
 							className={styles.socialLink}
@@ -27,7 +28,7 @@ function Footer() {
 							<FiGithub size={18} />
 						</a>
 						<a
-							href="https://linkedin.com"
+							href={linkedIn}
 							target="_blank"
 							rel="noopener noreferrer"
 							className={styles.socialLink}
@@ -36,7 +37,7 @@ function Footer() {
 							<FiLinkedin size={18} />
 						</a>
 						<a
-							href="mailto:sabeer@example.com"
+							href={`mailto:${email}`}
 							className={styles.socialLink}
 							aria-label="Email"
 						>
@@ -49,10 +50,7 @@ function Footer() {
 
 				<div className={styles.bottom}>
 					<p className={styles.copyright}>
-						© {currentYear} Sheik Mohamed Sabeer. All rights reserved.
-					</p>
-					<p className={styles.madeWith}>
-						Made with <FiHeart size={14} className={styles.heart} /> using React
+						© {currentYear} {name}. All rights reserved.
 					</p>
 				</div>
 			</div>

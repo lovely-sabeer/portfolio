@@ -2,16 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { HiMenuAlt3, HiX } from 'react-icons/hi';
 import styles from './Navbar.module.css';
-
-const navLinks = [
-	{ label: 'Home', id: 'home' },
-	{ label: 'About', id: 'about' },
-	{ label: 'Skills', id: 'skills' },
-	{ label: 'Experience', id: 'experience' },
-	{ label: 'Education', id: 'education' },
-	{ label: 'Projects', id: 'projects' },
-	{ label: 'Contact', id: 'contact' },
-];
+import { logoName, navLinks } from '../../assets/data';
 
 function Navbar() {
 	const [activeSection, setActiveSection] = useState('home');
@@ -79,7 +70,7 @@ function Navbar() {
 					onClick={() => scrollToSection('home')}
 					aria-label="Go to home"
 				>
-					<span className={styles.logoAccent}>S</span>abeer
+					<span className={styles.logoAccent}>{logoName.at(0)}</span>{logoName.substring(1)}
 				</button>
 
 				<ul className={styles.navLinks}>

@@ -2,7 +2,49 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { FiBookOpen, FiAward, FiMapPin } from 'react-icons/fi';
 import styles from './Education.module.css';
+import { education } from '../../assets/data';
 
+const EducationCard = ({ education }) => {
+	const EducationIcon = education.icon;
+
+	return (
+		<motion.div
+			className={styles.educationCard}
+			initial={{ opacity: 0, y: 40 }}
+			whileInView={{ opacity: 1, y: 0 }}
+			viewport={{ once: true }}
+			transition={{ duration: 0.6, delay: 0.15 }}
+		>
+			<div className={styles.cardHeader}>
+				<div className={styles.iconWrapper}>
+					<EducationIcon size={28} />
+				</div>
+
+				<div>
+					<h3 className={styles.degree}>{education.degree}</h3>
+					<p className={styles.field}>{education.field}</p>
+				</div>
+			</div>
+
+			<div className={styles.details}>
+				{education.details.map((detail, index) => {
+					const DetailIcon = detail.icon;
+
+					return (
+						<div key={index} className={styles.detailItem}>
+							<DetailIcon size={16} className={styles.detailIcon} />
+
+							<div>
+								<span className={styles.detailLabel}>{detail.label}</span>
+								<span className={styles.detailValue}>{detail.value}</span>
+							</div>
+						</div>
+					);
+				})}
+			</div>
+		</motion.div>
+	);
+};
 function Education() {
 	return (
 		<section id="education" className={styles.education}>
@@ -19,108 +61,9 @@ function Education() {
 				</motion.div>
 
 				<div className={styles.cardWrapper}>
-					<motion.div
-						className={styles.educationCard}
-						initial={{ opacity: 0, y: 40 }}
-						whileInView={{ opacity: 1, y: 0 }}
-						viewport={{ once: true }}
-						transition={{ duration: 0.6, delay: 0.15 }}
-					>
-						<div className={styles.cardHeader}>
-							<div className={styles.iconWrapper}>
-								<FiBookOpen size={28} />
-							</div>
-							<div>
-								<h3 className={styles.degree}>Bachelor of Engineering</h3>
-								<p className={styles.field}>Computer Science and Engineering</p>
-							</div>
-						</div>
-
-						<div className={styles.details}>
-							<div className={styles.detailItem}>
-								<FiAward size={16} className={styles.detailIcon} />
-								<div>
-									<span className={styles.detailLabel}>Duration</span>
-									<span className={styles.detailValue}>2020 – 2024</span>
-								</div>
-							</div>
-							<div className={styles.detailItem}>
-								<FiMapPin size={16} className={styles.detailIcon} />
-								<div>
-									<span className={styles.detailLabel}>Location</span>
-									<span className={styles.detailValue}>Tamil Nadu, India</span>
-								</div>
-							</div>
-						</div>
-					</motion.div>
-					<motion.div
-						className={styles.educationCard}
-						initial={{ opacity: 0, y: 40 }}
-						whileInView={{ opacity: 1, y: 0 }}
-						viewport={{ once: true }}
-						transition={{ duration: 0.6, delay: 0.15 }}
-					>
-						<div className={styles.cardHeader}>
-							<div className={styles.iconWrapper}>
-								<FiBookOpen size={28} />
-							</div>
-							<div>
-								<h3 className={styles.degree}>Bachelor of Engineering</h3>
-								<p className={styles.field}>Computer Science and Engineering</p>
-							</div>
-						</div>
-
-						<div className={styles.details}>
-							<div className={styles.detailItem}>
-								<FiAward size={16} className={styles.detailIcon} />
-								<div>
-									<span className={styles.detailLabel}>Duration</span>
-									<span className={styles.detailValue}>2020 – 2024</span>
-								</div>
-							</div>
-							<div className={styles.detailItem}>
-								<FiMapPin size={16} className={styles.detailIcon} />
-								<div>
-									<span className={styles.detailLabel}>Location</span>
-									<span className={styles.detailValue}>Tamil Nadu, India</span>
-								</div>
-							</div>
-						</div>
-					</motion.div>
-					<motion.div
-						className={styles.educationCard}
-						initial={{ opacity: 0, y: 40 }}
-						whileInView={{ opacity: 1, y: 0 }}
-						viewport={{ once: true }}
-						transition={{ duration: 0.6, delay: 0.15 }}
-					>
-						<div className={styles.cardHeader}>
-							<div className={styles.iconWrapper}>
-								<FiBookOpen size={28} />
-							</div>
-							<div>
-								<h3 className={styles.degree}>Bachelor of Engineering</h3>
-								<p className={styles.field}>Computer Science and Engineering</p>
-							</div>
-						</div>
-
-						<div className={styles.details}>
-							<div className={styles.detailItem}>
-								<FiAward size={16} className={styles.detailIcon} />
-								<div>
-									<span className={styles.detailLabel}>Duration</span>
-									<span className={styles.detailValue}>2020 – 2024</span>
-								</div>
-							</div>
-							<div className={styles.detailItem}>
-								<FiMapPin size={16} className={styles.detailIcon} />
-								<div>
-									<span className={styles.detailLabel}>Location</span>
-									<span className={styles.detailValue}>Tamil Nadu, India</span>
-								</div>
-							</div>
-						</div>
-					</motion.div>
+					{
+						education.map((item, index) => <EducationCard education={item} key={index} />)
+					}
 				</div>
 			</div>
 		</section>

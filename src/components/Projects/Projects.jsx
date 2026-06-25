@@ -10,6 +10,7 @@ import styles from './Projects.module.css';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+import { projects } from '../../assets/data';
 
 const cardVariants = {
 	hidden: { opacity: 0, y: 50 },
@@ -42,14 +43,11 @@ function Projects() {
 					transition={{ duration: 0.6 }}
 				>
 					<span className={styles.label}>Projects</span>
-					<h2 className={styles.title}>Featured Work</h2>
-					<p className={styles.subtitle}>
-						A selection of projects that showcase my skills across the full stack
-					</p>
+					<h2 className={styles.title}>Projects I've Developed & Contributed To</h2>
 				</motion.div>
 
 				<div className={styles.grid}>
-					{ProjectsData.map((project, index) => (
+					{projects.map((project, index) => (
 						<motion.div
 							key={project.id}
 							className={styles.projectCard}

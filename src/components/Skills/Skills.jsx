@@ -1,25 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import styles from './Skills.module.css';
-
-const skillCategories = [
-	{
-		title: 'Frontend',
-		skills: ['React.js', 'JavaScript', 'HTML5', 'CSS3', 'Bootstrap', 'Tailwind CSS'],
-	},
-	{
-		title: 'Backend',
-		skills: ['C#', '.NET', 'ASP.NET Core', 'Entity Framework Core', 'REST APIs', 'JWT Authentication'],
-	},
-	{
-		title: 'Database',
-		skills: ['MySQL', 'SQLite', 'MongoDB'],
-	},
-	{
-		title: 'Tools & Technologies',
-		skills: ['Git', 'GitHub', 'Visual Studio', 'VS Code', 'Postman'],
-	},
-];
+import { skills } from '../../assets/data';
 
 const containerVariants = {
 	hidden: {},
@@ -65,7 +47,7 @@ function Skills() {
 				</motion.div>
 
 				<div className={styles.grid}>
-					{skillCategories.map((category, catIndex) => (
+					{skills.map((category, catIndex) => (
 						<motion.div
 							key={category.title}
 							className={styles.categoryCard}

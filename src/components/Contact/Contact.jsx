@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { FiMail, FiPhone, FiSend, FiCheck, FiMapPin } from 'react-icons/fi';
 import styles from './Contact.module.css';
+import emailjs from '@emailjs/browser';
+import { address, email, phone } from '../../assets/data';
 
 function Contact() {
 	const [formData, setFormData] = useState({
@@ -12,21 +14,44 @@ function Contact() {
 	});
 	const [sending, setSending] = useState(false);
 	const [submitted, setSubmitted] = useState(false);
+	const now = new Date();
+	const timeString = now.toLocaleTimeString();
 
 	const handleChange = (e) => {
 		const { name, value } = e.target;
 		setFormData((prev) => ({ ...prev, [name]: value }));
 	};
 
-	const handleSubmit = (e) => {
+	const handleSubmit = async (e) => {
 		e.preventDefault();
 		setSending(true);
-		setTimeout(() => {
-			setSending(false);
+		try {
+			await emailjs.send(
+				import.meta.env.EMAILJS_SERVICE_ID,
+				import.meta.env.EMAILJS_TEMPLATE_ID,
+				{
+					name: formData.name,
+					email: formData.email,
+					subject: formData.subject,
+					time: timeString,
+					message: formData.message,
+				},
+				import.meta.env.EMAILJS_PUBLIC_KEY,
+			);
 			setSubmitted(true);
-			setFormData({ name: '', email: '', subject: '', message: '' });
+			setFormData({
+				name: '',
+				email: '',
+				subject: '',
+				message: '',
+			});
 			setTimeout(() => setSubmitted(false), 5000);
-		}, 1500);
+		} catch (error) {
+			console.error(error);
+			alert('Failed to send message.');
+		} finally {
+			setSending(false);
+		}
 	};
 
 	return (
@@ -63,7 +88,7 @@ function Contact() {
 
 							<div className={styles.contactItems}>
 								<a
-									href="mailto:sabeer@example.com"
+									href={`mailto:${email}`}
 									className={styles.contactItem}
 								>
 									<div className={styles.contactIcon}>
@@ -71,17 +96,17 @@ function Contact() {
 									</div>
 									<div>
 										<span className={styles.contactLabel}>Email</span>
-										<span className={styles.contactValue}>sabeer@example.com</span>
+										<span className={styles.contactValue}>{email}</span>
 									</div>
 								</a>
 
-								<a href="tel:+91XXXXXXXXXX" className={styles.contactItem}>
+								<a href={`tel:+91${phone}`} className={styles.contactItem}>
 									<div className={styles.contactIcon}>
 										<FiPhone size={18} />
 									</div>
 									<div>
 										<span className={styles.contactLabel}>Phone</span>
-										<span className={styles.contactValue}>+91 XXXXX XXXXX</span>
+										<span className={styles.contactValue}>+91 {phone}</span>
 									</div>
 								</a>
 
@@ -91,7 +116,7 @@ function Contact() {
 									</div>
 									<div>
 										<span className={styles.contactLabel}>Location</span>
-										<span className={styles.contactValue}>Tamil Nadu, India</span>
+										<span className={styles.contactValue}>{address}</span>
 									</div>
 								</div>
 							</div>

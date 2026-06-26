@@ -57,7 +57,7 @@ export const skills = [
 	},
 	{
 		title: 'Backend',
-		skills: ['C#', '.NET', 'ASP.NET Core', 'Entity Framework Core', 'REST APIs', 'JWT Authentication'],
+		skills: ['C#', '.NET', 'ASP.NET Core', 'Entity Framework Core', 'REST APIs', 'JWT Authentication', 'Repository Pattern', 'Singleton Pattern', 'Dependency Injection', 'LINQ', 'OOPs', 'SOLID Principles'],
 	},
 	{
 		title: 'Database',
@@ -158,8 +158,8 @@ export const projects = [
 	{
 		id: 1,
 		title: 'Monitor Application',
-		duration: 'Sep 2025 – May 2026',
-		associatedWith: 'Professional Project',
+		duration: 'Feb 2026 - Mar 2026',
+		associatedWith: 'Risolutor Technologies Pvt Ltd',
 		technologies: ['ASP.NET Core', 'React.js', 'MySQL', 'Windows Service'],
 		description:
 			'A real-time monitoring application designed to track system activities, application health, and background services. The system provides centralized monitoring, status reporting, and automated notifications for operational visibility.',
@@ -188,17 +188,17 @@ export const projects = [
 	{
 		id: 2,
 		title: 'FSM Application',
-		duration: '2026',
-		associatedWith: 'Professional Project',
+		duration: 'Sep 2025 - Nov 2025',
+		associatedWith: 'Risolutor Technologies Pvt Ltd',
 		technologies: ['ASP.NET Core', 'React.js', 'MySQL'],
 		description:
 			'A field service management application developed to manage service requests, engineer assignments, task tracking, and customer interactions through a centralized web platform.',
 		features: [
 			'Service request management',
 			'Task assignment and progress tracking',
-			'Customer and engineer management',
+			'Employee management',
+			'Payout Management',
 			'Real-time status updates',
-			'Reporting and dashboard modules',
 		],
 		challenges: [
 			'Managing multiple workflow states efficiently',
@@ -218,8 +218,8 @@ export const projects = [
 	{
 		id: 3,
 		title: 'Gym Management Application',
-		duration: '2026',
-		associatedWith: 'Professional Project',
+		duration: '',
+		associatedWith: 'NA / Professional Project',
 		technologies: ['ASP.NET Core', 'React.js', 'MySQL'],
 		description:
 			'A complete gym management solution for managing memberships, trainers, workout plans, attendance, and payment records through a user-friendly administrative dashboard.',
@@ -242,14 +242,14 @@ export const projects = [
 			'https://picsum.photos/seed/gym2/800/500',
 			'https://picsum.photos/seed/gym3/800/500',
 		],
-		github: '',
-		liveDemo: '',
+		github: 'https://github.com/lovely-sabeer/Gym_Management_System.git',
+		liveDemo: 'https://gym-management-system-teal.vercel.app',
 	},
 	{
 		id: 4,
 		title: 'HR Management Application',
-		duration: '2025',
-		associatedWith: 'Professional Project',
+		duration: 'Jun 2025 - Present',
+		associatedWith: ' NA / Personal Project',
 		technologies: ['ASP.NET Core', 'React.js', 'MySQL'],
 		description:
 			'An initial version of an HR management system developed to streamline employee information, department management, attendance, and leave tracking through a centralized platform.',
@@ -272,14 +272,14 @@ export const projects = [
 			'https://picsum.photos/seed/hr2/800/500',
 			'https://picsum.photos/seed/hr3/800/500',
 		],
-		github: '',
+		github: 'https://github.com/lovely-sabeer/Hr_Management.git',
 		liveDemo: '',
 	},
 	{
 		id: 5,
 		title: 'Femi E-Commerce Website',
-		duration: '2024',
-		associatedWith: 'Personal Project',
+		duration: 'Nov 2024 - Dec - 2025',
+		associatedWith: 'NA / Personal Project',
 		technologies: ['React.js', 'Tailwind CSS', 'Firebase'],
 		description:
 			"A modern e-commerce website designed for women's hygiene products with responsive layouts, secure authentication, and Firebase- powered backend services.",
@@ -302,7 +302,7 @@ export const projects = [
 			'https://picsum.photos/seed/femi2/800/500',
 			'https://picsum.photos/seed/femi3/800/500',
 		],
-		github: '',
-		liveDemo: '',
+		github: 'https://github.com/lovely-sabeer/FemiECommerce.git',
+		liveDemo: 'femi-e-commerce.vercel.app',
 	},
 ];

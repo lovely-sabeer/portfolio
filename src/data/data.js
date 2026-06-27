@@ -1,5 +1,5 @@
 import { FiAward, FiBookOpen, FiCode, FiDatabase, FiLayers, FiMapPin, FiTarget } from "react-icons/fi"
-import { heroPic, resume } from "../assets/assest"
+import { heroPic, resume, noImg, femiLanding, femiLogin, femiRegister, femiPurchase } from "../assets/assest"
 
 
 export const navLinks = [
@@ -160,7 +160,7 @@ export const projects = [
 		title: 'Monitor Application',
 		duration: 'Feb 2026 - Mar 2026',
 		associatedWith: 'Risolutor Technologies Pvt Ltd',
-		technologies: ['ASP.NET Core', 'React.js', 'MySQL', 'Windows Service'],
+		technologies: ['.Net','MAUI','Windows Services', 'SignalR', 'SQLite','ASP.NET Core', 'MySQL'],
 		description:
 			'A real-time monitoring application designed to track system activities, application health, and background services. The system provides centralized monitoring, status reporting, and automated notifications for operational visibility.',
 		features: [
@@ -178,9 +178,9 @@ export const projects = [
 		architecture:
 			'Built using ASP.NET Core REST APIs, React.js frontend, MySQL database, and Windows Services for continuous background monitoring and task execution.',
 		images: [
-			'https://picsum.photos/seed/monitor1/800/500',
-			'https://picsum.photos/seed/monitor2/800/500',
-			'https://picsum.photos/seed/monitor3/800/500',
+			noImg,
+			noImg,
+			noImg,
 		],
 		github: '',
 		liveDemo: '',
@@ -190,7 +190,7 @@ export const projects = [
 		title: 'FSM Application',
 		duration: 'Sep 2025 - Nov 2025',
 		associatedWith: 'Risolutor Technologies Pvt Ltd',
-		technologies: ['ASP.NET Core', 'React.js', 'MySQL'],
+		technologies: ['ASP.NET Core', 'React.js', 'MySQL', 'REST APIs', 'API Integration', 'Singleton Pattern', 'Axios'],
 		description:
 			'A field service management application developed to manage service requests, engineer assignments, task tracking, and customer interactions through a centralized web platform.',
 		features: [
@@ -208,9 +208,9 @@ export const projects = [
 		architecture:
 			'Developed using ASP.NET Core REST APIs with React.js frontend and MySQL database following a layered architecture for maintainability.',
 		images: [
-			'https://picsum.photos/seed/fsm1/800/500',
-			'https://picsum.photos/seed/fsm2/800/500',
-			'https://picsum.photos/seed/fsm3/800/500',
+			noImg,
+			noImg,
+			noImg,
 		],
 		github: '',
 		liveDemo: '',
@@ -220,7 +220,7 @@ export const projects = [
 		title: 'Gym Management Application',
 		duration: '',
 		associatedWith: 'NA / Professional Project',
-		technologies: ['ASP.NET Core', 'React.js', 'MySQL'],
+		technologies: ['React.js', 'Java Script', 'Apex Charts', 'Axios'],
 		description:
 			'A complete gym management solution for managing memberships, trainers, workout plans, attendance, and payment records through a user-friendly administrative dashboard.',
 		features: [
@@ -238,9 +238,9 @@ export const projects = [
 		architecture:
 			'Built with ASP.NET Core backend, React.js frontend, and MySQL database using RESTful APIs for seamless communication.',
 		images: [
-			'https://picsum.photos/seed/gym1/800/500',
-			'https://picsum.photos/seed/gym2/800/500',
-			'https://picsum.photos/seed/gym3/800/500',
+			noImg,
+			noImg,
+			noImg,
 		],
 		github: 'https://github.com/lovely-sabeer/Gym_Management_System.git',
 		liveDemo: 'https://gym-management-system-teal.vercel.app',
@@ -250,7 +250,7 @@ export const projects = [
 		title: 'HR Management Application',
 		duration: 'Jun 2025 - Present',
 		associatedWith: ' NA / Personal Project',
-		technologies: ['ASP.NET Core', 'React.js', 'MySQL'],
+		technologies: ['React.js', 'Java Script', 'Apex Charts', 'Axios', 'ASP.NET Core', 'MySQL', 'Repository Pattern', 'Entity Framework Core (ORM)'],
 		description:
 			'An initial version of an HR management system developed to streamline employee information, department management, attendance, and leave tracking through a centralized platform.',
 		features: [
@@ -268,9 +268,9 @@ export const projects = [
 		architecture:
 			'Developed using ASP.NET Core APIs, React.js frontend, and MySQL with a modular architecture to support future feature enhancements.',
 		images: [
-			'https://picsum.photos/seed/hr1/800/500',
-			'https://picsum.photos/seed/hr2/800/500',
-			'https://picsum.photos/seed/hr3/800/500',
+			noImg,
+			noImg,
+			noImg,
 		],
 		github: 'https://github.com/lovely-sabeer/Hr_Management.git',
 		liveDemo: '',
@@ -279,8 +279,8 @@ export const projects = [
 		id: 5,
 		title: 'Femi E-Commerce Website',
 		duration: 'Nov 2024 - Dec - 2025',
-		associatedWith: 'NA / Personal Project',
-		technologies: ['React.js', 'Tailwind CSS', 'Firebase'],
+		associatedWith: 'NA / For Learn Firebase Auth',
+		technologies: ['React.js', 'Tailwind CSS', 'Firebase Auth'],
 		description:
 			"A modern e-commerce website designed for women's hygiene products with responsive layouts, secure authentication, and Firebase- powered backend services.",
 		features: [
@@ -298,9 +298,10 @@ export const projects = [
 		architecture:
 			'Built using React.js with Tailwind CSS for the frontend and Firebase Authentication with Cloud Firestore for backend services and real-time data management.',
 		images: [
-			'https://picsum.photos/seed/femi1/800/500',
-			'https://picsum.photos/seed/femi2/800/500',
-			'https://picsum.photos/seed/femi3/800/500',
+			femiLanding,
+			femiLogin,
+			femiRegister,
+			femiPurchase,
 		],
 		github: 'https://github.com/lovely-sabeer/FemiECommerce.git',
 		liveDemo: 'femi-e-commerce.vercel.app',
